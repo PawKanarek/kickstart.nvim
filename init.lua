@@ -335,7 +335,7 @@ require('lazy').setup({
         ['clang-format'] = {
           args = {
             -- Set a base style and override the tab/indent settings
-            '--style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never}',
+            '--style={BasedOnStyle: Webkit, IndentWidth: 4, UseTab: Never, ColumnLimit: 180}',
           },
         },
       },
