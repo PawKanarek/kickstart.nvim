@@ -3,6 +3,8 @@ return {
     dependencies = {
         'j-hui/fidget.nvim', -- Useful status updates for LSP.
         'saghen/blink.cmp',  -- Allows extra capabilities provided by blink.cmp
+        'mason-org/mason.nvim',
+        "mason-org/mason-lspconfig.nvim",
     },
     config = function()
         vim.lsp.config('clangd', {
@@ -15,6 +17,7 @@ return {
 
         vim.lsp.enable("clangd")
         vim.lsp.enable("lua_ls")
+        vim.lsp.enable('pyright')
 
         vim.api.nvim_create_autocmd('LspAttach', {
             group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),

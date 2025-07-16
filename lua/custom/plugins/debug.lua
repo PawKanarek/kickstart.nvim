@@ -26,55 +26,9 @@ return {
             options = { detached = false}
         }
 
-        -- dap.configurations.cpp = {
-        --     {
-        --         name = 'Debug VulkanGame', -- Same name as in launch.json
-        --         type = 'cppdbg',
-        --         request = 'launch',
-        --         -- Use a function to get the current project path
-        --         program = function()
-        --             return vim.fn.getcwd() .. '/build/VulkanGame'
-        --         end,
-        --         cwd = '${workspaceFolder}', -- Use the project root as the current working directory
-        --         stopAtEntry = false,
-        --         MIMode = 'lldb',            -- Important for macOS
-        --         externalConsole = false,
-        --
-        --         -- Replicate the environment variables
-        --         environment = {
-        --             {
-        --                 name = 'VK_ICD_FILENAMES',
-        --                 value = function()
-        --                     return vim.fn.getcwd()
-        --                         .. '/VulkanSDK/1.4.313.1/macOS/share/vulkan/icd.d/MoltenVK_icd.json'
-        --                 end,
-        --             },
-        --             {
-        --                 name = 'VK_LAYER_PATH',
-        --                 value = function()
-        --                     return vim.fn.getcwd() .. '/VulkanSDK/1.4.313.1/macOS/share/vulkan/explicit_layer.d'
-        --                 end,
-        --             },
-        --         },
-        --
-        --         -- Replicate setupCommands for pretty printing
-        --         setupCommands = {
-        --             {
-        --                 description = 'Enable pretty-printing for lldb',
-        --                 text = '-enable-pretty-printing',
-        --                 ignoreFailures = true,
-        --             },
-        --         },
-        --     },
-        -- }
-        -- dap.configurations.c = dap.configurations.cpp
+        require('dap-python').setup('python')
 
-        -- Dap UI setup
-        -- For more information, see |:help nvim-dap-ui|
         dapui.setup {
-            -- Set icons to characters that are more likely to work in every terminal.
-            --    Feel free to remove or use ones that you like more! :)
-            --    Don't feel like these are good choices.
             icons = { expanded = '▾', collapsed = '▸', current_frame = '*' },
             controls = {
                 icons = {
