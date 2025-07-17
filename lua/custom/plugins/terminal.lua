@@ -1,0 +1,26 @@
+-- lua/plugins/toggleterm.lua
+return {}
+-- return {
+--   'akinsho/toggleterm.nvim',
+--   version = "*",
+--   opts = {
+--     -- The size of the terminal window. Can be a number (lines) or a float (percentage)
+--     size = 15,
+--     -- This command is executed when the terminal opens
+--     open_mapping = [[<c-\>]], -- I recommend Ctrl+\ to toggle, it feels natural
+--     -- Open the terminal in a horizontal split at the bottom
+--     direction = 'horizontal',
+--     -- Make the terminal window look nice
+--     shade_filetypes = {},
+--     shade_terminals = true,
+--     shading_factor = 2,
+--     -- Start in insert mode
+--     start_in_insert = true,
+--     -- Persist the terminal buffer/process
+--     persist_size = true,
+--     -- Close the terminal when the job exits
+--     close_on_exit = true,
+--     -- The shell to use
+--     shell = vim.o.shell,
+--   },
+-- }

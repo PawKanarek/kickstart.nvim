@@ -15,6 +15,14 @@ return {
             root_markers = { '.clangd', 'compile_commands.json' },
         })
 
+        vim.lsp.config('pyright', {
+            settings = {
+                python = {
+                    pythonPath = '/Users/raix/miniconda3/envs/btcli/bin/python'
+                }
+            }
+        })
+
         vim.lsp.enable("clangd")
         vim.lsp.enable("lua_ls")
         vim.lsp.enable('pyright')
